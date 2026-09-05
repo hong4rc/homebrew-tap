@@ -1,0 +1,30 @@
+name: CI
+
+# A tap whose formulae do not parse is worse than no tap: the failure surfaces on
+# someone else's machine, mid-install. Audit on every push.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Upstream release assets can move or disappear; a weekly run catches a dead
+    # URL before a user does.
+    - cron: "0 6 * * 1"
+
+jobs:
+  audit:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Tap this repository
+        run: |
+          brew tap hong4rc/tap "$GITHUB_WORKSPACE"
+
+      - name: Audit formulae and casks
+        run: |
+          brew audit --strict --online hong4rc/tap/git-vanity
+          brew audit --cask --strict --online hong4rc/tap/glowkey
+
+      - name: Style
+        run: brew style hong4rc/tap
