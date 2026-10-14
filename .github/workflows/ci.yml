@@ -24,6 +24,7 @@ jobs:
       - name: Audit formulae and casks
         run: |
           brew audit --strict --online hong4rc/tap/git-vanity
+          brew audit --strict --online hong4rc/tap/dpi-bypass
           brew audit --cask --strict --online hong4rc/tap/glowkey
 
       - name: Style
