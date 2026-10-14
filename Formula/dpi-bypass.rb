@@ -28,6 +28,23 @@ class DpiBypass < Formula
     bin.install "dpi-bypass"
   end
 
+  # `brew services start dpi-bypass` runs it at login. On macOS the menu bar icon
+  # appears from that background run; Quit in the menu stops it until the next login.
+  service do
+    run [opt_bin/"dpi-bypass"]
+    keep_alive crashed: true
+    log_path var/"log/dpi-bypass.log"
+    error_log_path var/"log/dpi-bypass.log"
+  end
+
+  def caveats
+    <<~EOS
+      Run `dpi-bypass` in a terminal to start it, or start it at every login with:
+        brew services start dpi-bypass
+      On macOS a dot appears in the menu bar: green when the bypass is on.
+    EOS
+  end
+
   test do
     assert_match version.to_s, shell_output("#{bin}/dpi-bypass --version")
   end
