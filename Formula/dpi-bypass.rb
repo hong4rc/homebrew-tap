@@ -5,7 +5,6 @@
 class DpiBypass < Formula
   desc "Bypass DPI and SNI blocking (such as blocked Steam), no driver or admin"
   homepage "https://github.com/hong4rc/dpi-bypass"
-  version "0.3.0"
 
   on_macos do
     on_arm do

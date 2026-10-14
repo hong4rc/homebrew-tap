@@ -15,6 +15,7 @@ brew tap hong4rc/tap
 |---|---|
 | `brew install hong4rc/tap/git-vanity` | Generate Git commit hashes matching a custom hex pattern — make a commit start with `cafe`, `dead`, `c0ffee`. |
 | `brew install --cask hong4rc/tap/glowkey` | A Vietnamese input method for macOS, in the style of UniKey. Telex, VNI and Simple Telex, a per-app ignore list, macros. |
+| `brew install hong4rc/tap/dpi-bypass` | Bypass DPI / SNI blocking (for example blocked Steam) with no driver and no admin rights. Installing through Homebrew avoids the macOS "cannot verify" prompt. Run `dpi-bypass` in a terminal. |
 
 ## GlowKey needs two extra steps
 
