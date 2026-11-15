@@ -8,19 +8,19 @@ class DpiBypass < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/hong4rc/dpi-bypass/releases/download/v0.3.2/dpi-bypass-macos-apple-silicon.tar.gz"
-      sha256 "04da5ba5ff1905774a8024c7abc4a6fd263a8a5a3bef3c59687673131722132e"
+      url "https://github.com/hong4rc/dpi-bypass/releases/download/v0.3.3/dpi-bypass-macos-apple-silicon.tar.gz"
+      sha256 "d23e7b45978836b604f47301034fd258879c5056959fc0f1122130916b3fa1b9"
     end
     on_intel do
-      url "https://github.com/hong4rc/dpi-bypass/releases/download/v0.3.2/dpi-bypass-macos-intel.tar.gz"
-      sha256 "3fbd88910c641a96e7e0d2d1cf83c090a1fd2cd4ad5913b3c5c938302ab91a78"
+      url "https://github.com/hong4rc/dpi-bypass/releases/download/v0.3.3/dpi-bypass-macos-intel.tar.gz"
+      sha256 "64a11d42e14e420ad0f6d79aed29bac12613a0a5323d8072c09dab0ecae4edd2"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/hong4rc/dpi-bypass/releases/download/v0.3.2/dpi-bypass-linux-amd64.tar.gz"
-      sha256 "c602d3b1441a4e96c9fab2bc8ae61364218d0a0f4370e0fef7bad180be402354"
+      url "https://github.com/hong4rc/dpi-bypass/releases/download/v0.3.3/dpi-bypass-linux-amd64.tar.gz"
+      sha256 "e42c404481aef90367fd88bc3d891df4025e31a9e8217d94763bbe2d6bf886f4"
     end
   end
 
