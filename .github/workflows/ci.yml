@@ -20,6 +20,9 @@ jobs:
       - name: Tap this repository
         run: |
           brew tap hong4rc/tap "$GITHUB_WORKSPACE"
+          # Homebrew refuses to load formulae from a tap outside the official ones
+          # until the tap is trusted.
+          brew trust --tap hong4rc/tap
 
       - name: Audit formulae and casks
         run: |

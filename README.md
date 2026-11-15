@@ -4,7 +4,11 @@ Homebrew formulae and casks for [hong4rc](https://github.com/hong4rc) projects.
 
 ```sh
 brew tap hong4rc/tap
+brew trust --tap hong4rc/tap
 ```
+
+The second line is needed on recent Homebrew versions, which refuse to load a
+formula from a tap outside the official ones until you trust the tap.
 
 `hong4rc/tap` is the short form Homebrew expands to this repository — the
 `homebrew-` prefix in the repository name is a convention, not something you type.
