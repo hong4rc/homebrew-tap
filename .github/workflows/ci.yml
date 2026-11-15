@@ -25,6 +25,7 @@ jobs:
         run: |
           brew audit --strict --online hong4rc/tap/git-vanity
           brew audit --strict --online hong4rc/tap/dpi-bypass
+          brew audit --strict --online hong4rc/tap/arcade
           brew audit --cask --strict --online hong4rc/tap/glowkey
 
       - name: Style
