@@ -8,15 +8,15 @@ class Arcade < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/hong4rc/arcade/releases/download/v0.1.4/arcade-macos-apple-silicon.tar.gz"
-      sha256 "096dd95caddf294550218a74f333f458029eaba7342dbd130678ce351e91f83c"
+      url "https://github.com/hong4rc/arcade/releases/download/v0.1.5/arcade-macos-apple-silicon.tar.gz"
+      sha256 "7b0f4873456757f25f26471fe1addb04ca9ca6325726c0df09ea3b9723203b1d"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/hong4rc/arcade/releases/download/v0.1.4/arcade-linux-arm64.tar.gz"
-      sha256 "12c1f47fdef4a7f145bdd058fea1baa3f16bf6dd07d72367e8261b68503e60d2"
+      url "https://github.com/hong4rc/arcade/releases/download/v0.1.5/arcade-linux-arm64.tar.gz"
+      sha256 "00bc96e5e5a6ec13c0c50fb50ae3b6a690ff6f12c29baaf7641aaf9fe01e09ea"
     end
     on_intel do
       url "https://github.com/hong4rc/arcade/releases/download/v0.1.4/arcade-linux-amd64.tar.gz"
@@ -31,9 +31,12 @@ class Arcade < Formula
   def caveats
     <<~EOS
       Sessions live in a background process that keeps running across upgrades.
-      After `brew upgrade`, run this once so the new version takes over (it ends
-      the running sessions):
-        arcade kill-server
+      After `brew upgrade`, run this so the new version takes over and the
+      sessions keep running:
+        arcade upgrade
+      A background process from 0.1.3 or 0.1.4 cannot do that: move it once with
+      (this ends the programs running in its panes; run it outside Arcade)
+        arcade upgrade --restart
     EOS
   end
 
