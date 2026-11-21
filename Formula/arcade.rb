@@ -8,15 +8,15 @@ class Arcade < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/hong4rc/arcade/releases/download/v0.1.5/arcade-macos-apple-silicon.tar.gz"
-      sha256 "7b0f4873456757f25f26471fe1addb04ca9ca6325726c0df09ea3b9723203b1d"
+      url "https://github.com/hong4rc/arcade/releases/download/v0.1.6/arcade-macos-apple-silicon.tar.gz"
+      sha256 "49462bb39551a75650fb0d9931fa42b269eb944aaef8a91b34217ce01d0dc707"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/hong4rc/arcade/releases/download/v0.1.5/arcade-linux-arm64.tar.gz"
-      sha256 "00bc96e5e5a6ec13c0c50fb50ae3b6a690ff6f12c29baaf7641aaf9fe01e09ea"
+      url "https://github.com/hong4rc/arcade/releases/download/v0.1.6/arcade-linux-arm64.tar.gz"
+      sha256 "18953bfb1fddb9b55bccbd116372175b33ad1ef6f47eafc052a845d95f6b9c5e"
     end
     on_intel do
       url "https://github.com/hong4rc/arcade/releases/download/v0.1.4/arcade-linux-amd64.tar.gz"
